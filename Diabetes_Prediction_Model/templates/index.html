@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction App</title>
+    <style>
+        /* CSS to enhance the visual appeal */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+            background: url('/static/background.png') no-repeat center center fixed; /* Set the background image */
+            background-size: cover; /* Cover the entire background */
+        }
+
+        /* Overlay effect to create transparency */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5); /* White overlay with 0.8 opacity */
+            z-index: -1; /* Send the overlay behind the container */
+        }
+
+        .container {
+            width: 50%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative; /* Position relative to be above the overlay */
+        }
+        h1 {
+            color: #e81c96;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #e81c96;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #e81c96;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay div to give background image transparency -->
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="number" id="pregnancies" name="feature1" required>
+            </div>
+            <div class="form-group">
+                <label for="glucose">Glucose Level:</label>
+                <input type="number" id="glucose" name="feature2" required>
+            </div>
+            <div class="form-group">
+                <label for="bloodPressure">Blood Pressure:</label>
+                <input type="number" id="bloodPressure" name="feature3" required>
+            </div>
+            <div class="form-group">
+                <label for="skinThickness">Skin Thickness:</label>
+                <input type="number" id="skinThickness" name="feature4" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin">Insulin Level:</label>
+                <input type="number" id="insulin" name="feature5" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" step="0.1" id="bmi" name="feature6" required>
+            </div>
+            <div class="form-group">
+                <label for="diabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+                <input type="number" step="0.001" id="diabetesPedigreeFunction" name="feature7" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="feature8" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
