@@ -8,6 +8,9 @@ This project is a web application for predicting diabetes based on user-provided
 - **Prediction**: The app uses a trained SVM model to predict if a person is diabetic.
 - **User-Friendly Interface**: A simple and intuitive HTML form for input and display of results.
 
+  ![Diabetes Prediction Web App Screenshot](screenshot.png)
+
+
 ## Getting Started
 
 ### Prerequisites
