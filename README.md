@@ -19,6 +19,26 @@ Ensure you have the following installed:
 - Scikit-learn
 - Pickle
 
-Install the required Python packages using:
-```bash
-pip install flask numpy scikit-learn
+## Installation
+
+### 1. Clone the Repository
+- git clone https://github.com/yourusername/diabetes-prediction.git
+- cd diabetes-prediction
+
+### 2. Run the Flask App
+- python app.py
+
+### 3. Open Browser
+- Open in Browser: Go to http://127.0.0.1:5000/ to use the app.
+
+## Usage
+- Input the required health data into the form fields (like glucose level, blood pressure, BMI, etc.).
+- Click on the "Predict" button.
+- The app will display whether the person is diabetic or not.
+
+## Data
+The model was trained on the Pima Indians Diabetes Database, which is publicly available on Kaggle.
+
+
+
+
