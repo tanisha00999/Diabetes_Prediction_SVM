@@ -3,8 +3,8 @@ import numpy as np
 import pickle
 
 # Load the trained classifier model and scaler
-model = pickle.load(open('model/classifier.pkl', 'rb'))
-scaler = pickle.load(open('model/scaler.pkl', 'rb'))
+model = pickle.load(open('https://github.com/tanisha00999/Diabetes_Prediction_SVM/blob/main/Diabetes_Prediction_Model/model/classifier.pkl', 'rb'))
+scaler = pickle.load(open('https://github.com/tanisha00999/Diabetes_Prediction_SVM/blob/main/Diabetes_Prediction_Model/model/scaler.pkl', 'rb'))
 
 # Title and description for the web app
 st.title("Diabetes Prediction App")
