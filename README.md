@@ -42,6 +42,10 @@ Ensure you have the following installed:
 ## Data
 The model was trained on the Pima Indians Diabetes Database, which is publicly available on Kaggle.
 
+##Use this link for a view on Streamlit Deployment
+- https://appapppy-cixg2fokeygng2kzhjmpcj.streamlit.app/
+
+
 
 
 
