@@ -4,8 +4,8 @@ import pickle
 import os
 
 # Define paths to the model and scaler
-model_path = 'model/classifier.pkl'
-scaler_path = 'model/scaler.pkl'
+model_path = 'Diabetes_Prediction_Model/model/classifier.pkl'
+scaler_path = 'Diabetes_Prediction_Model/model/scaler.pkl'
 
 try:
     # Check if files exist
