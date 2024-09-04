@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pickle
 import os
+import sklearn
 
 # Define paths to the model and scaler
 model_path = 'Diabetes_Prediction_Model/model/classifier.pkl'
